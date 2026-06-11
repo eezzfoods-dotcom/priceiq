@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: priceiq-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: AMAZON_ACCESS_KEY
+        sync: false
+      - key: AMAZON_SECRET_KEY
+        sync: false
+      - key: AMAZON_PARTNER_TAG
+        sync: false
+      - key: FLIPKART_AFFILIATE_ID
+        sync: false
+      - key: FLIPKART_AFFILIATE_TOKEN
+        sync: false
+      - key: RAPIDAPI_KEY
+        sync: false
