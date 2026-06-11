@@ -1,4 +1,7 @@
-﻿from datetime import date
+import httpx
+from bs4 import BeautifulSoup
+import os
+from datetime import date
 import asyncio
 import logging
 
